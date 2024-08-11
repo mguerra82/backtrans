@@ -10,7 +10,8 @@ const validarCampos = (req, res = response, next )=>{
     if(!errores.isEmpty()){
         return res.status(400).json({
             codigo:7,
-            mensaje:mensaje["msg"]
+            mensaje:errores.mapped()
+           // mensaje:mensaje["msg"]
         })
     }
     next();
