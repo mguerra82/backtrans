@@ -25,7 +25,8 @@ app.use('/api/camion', require('./routes/camion'));
 app.use('/api/usuarios', require('./routes/usuario'));
 app.use('/api/empleado', require('./routes/empleado'));
 app.use('/api/piloto', require('./routes/piloto'));
-app.use('/api/trans', require('./routes/transportista'))
+app.use('/api/trans', require('./routes/transportista'));
+app.use('/api/tipoAnticipo', require('./routes/tipoAnticipo'));
 
 /**
  * Server
