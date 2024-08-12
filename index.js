@@ -27,6 +27,13 @@ app.use('/api/empleado', require('./routes/empleado'));
 app.use('/api/piloto', require('./routes/piloto'));
 app.use('/api/trans', require('./routes/transportista'));
 app.use('/api/tipoAnticipo', require('./routes/tipoAnticipo'));
+app.use('/api/producto', require('./routes/producto'));
+
+/**
+ * Procesos
+ */
+
+app.use('/api/proc/polizaEnc', require('./routes/procPolizaEnc'));
 
 /**
  * Server

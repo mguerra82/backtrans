@@ -17,7 +17,7 @@ const getTransportista = (req, res) =>{
           else {
             res.json({
               codigo: 1,
-              usuario: result[0]
+              transportista: result[0]
             });
             return;
           }

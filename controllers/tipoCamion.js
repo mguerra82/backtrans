@@ -23,7 +23,7 @@ const getTipoCamion = (req, res) => {
       else {
         res.json({
           codigo: 1,
-          usuario: result[0]
+          tipoCamion: result[0]
         });
         return;
       }

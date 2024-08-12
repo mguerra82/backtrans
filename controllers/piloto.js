@@ -18,7 +18,7 @@ const getPilotos = (req, res) =>{
           else {
             res.json({
               codigo: 1,
-              usuario: result[0]
+              piloto: result[0]
             });
             return;
           }

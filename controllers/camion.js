@@ -15,7 +15,7 @@ const getCamion = (req, res) => {
             } else {
                 res.json({
                     codigo: 1,
-                    usuario: result[0]
+                    camion: result[0]
                 });
                 return;
             }
