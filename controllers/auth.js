@@ -22,10 +22,6 @@ const login = async(req, res = response)=>{
                 console.log('ERROR --->', err.message);
                 return;
             } else {
-                const id_ = result[0].id;
-                const intentos_ = result[0].intentos;
-                console.log('ID y Intentos ', id_, ' ',intentos_)
-                console.log('RESULT---->', result);
                 /**
                  * Valida si existe el usuario
                  */
@@ -35,6 +31,11 @@ const login = async(req, res = response)=>{
                         msg: 'Usuario o pasword no existen.'
                     });
                     return;
+                const id_ = result[0].id;
+                const intentos_ = result[0].intentos;
+                console.log('ID y Intentos ', id_, ' ',intentos_)
+                console.log('RESULT---->', result);
+                
                 } else {
                     /**
                      * Valida si el usuario esta bloqueado
@@ -97,7 +98,6 @@ const login = async(req, res = response)=>{
                              }  
                         })
                         console.log('Validacion PASWORD ---> ', validaPassword);
-                        console.log('RETORNO ---> ', result[0].usuario, ' ', result[0].password);
                         const uid = result[0].id;
                         const token = await generarJWT(uid);
                         console.log('TOKEN ---->', token);

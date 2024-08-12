@@ -56,7 +56,6 @@ const crearPolizaEnc = (req, res )=>{
         });
 
     } catch (error) {
-        console.err('ERROR catch --->', error);
         return res.status(402).json({
             ok: false,
             msn: error
@@ -80,14 +79,12 @@ const actualizaPolizaEnc = (req, res )=>{
                 console.log('ERRROR----->', err);
                 return;
             } else {
-                console.log('RESULT PILOTOS --->', result);
                 if (result[0][0].codigo === 1) {
                     return res.status(200).json({
                         codigo: result[0][0].codigo,
                         mensaje: result[0][0].mensaje
                     });
                 }
-                console.log('RESULT', result);
                 res.status(203).json({
                     codigo: result[0][0].codigo,
                     mensaje: result[0][0].mensaje
@@ -97,7 +94,6 @@ const actualizaPolizaEnc = (req, res )=>{
         });
 
     } catch (error) {
-        console.err('ERROR catch --->', error);
         return res.status(402).json({
             ok: false,
             msn: error
