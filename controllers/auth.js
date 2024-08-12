@@ -31,12 +31,13 @@ const login = async(req, res = response)=>{
                         msg: 'Usuario o pasword no existen.'
                     });
                     return;
-                const id_ = result[0].id;
-                const intentos_ = result[0].intentos;
-                console.log('ID y Intentos ', id_, ' ',intentos_)
-                console.log('RESULT---->', result);
+                
                 
                 } else {
+                    const id_ = result[0].id;
+                    const intentos_ = result[0].intentos;
+                    console.log('ID y Intentos ', id_, ' ',intentos_)
+                    console.log('RESULT---->', result);
                     /**
                      * Valida si el usuario esta bloqueado
                      */
