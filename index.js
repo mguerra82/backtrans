@@ -28,6 +28,7 @@ app.use('/api/piloto', require('./routes/piloto'));
 app.use('/api/trans', require('./routes/transportista'));
 app.use('/api/tipoAnticipo', require('./routes/tipoAnticipo'));
 app.use('/api/producto', require('./routes/producto'));
+app.use('/api/tarifa', require('./routes/tarifa'));
 
 /**
  * Procesos
