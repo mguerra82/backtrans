@@ -35,6 +35,7 @@ app.use('/api/tarifa', require('./routes/tarifa'));
  */
 
 app.use('/api/proc/polizaEnc', require('./routes/procPolizaEnc'));
+app.use('/api/proc/polizaDet', require('./routes/procPolizaDet'));
 
 /**
  * Server
